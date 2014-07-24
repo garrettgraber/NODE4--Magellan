@@ -11,6 +11,10 @@ app.use(bodyParser());
 
 app.get('/', controller.indexRoute);
 
+app.get('/previous', controller.previous);
+
+app.get('/next', controller.next);
+
 var server = app.listen(5731, function() {
 	console.log('Express server listening on port ' + server.address().port);
 });
